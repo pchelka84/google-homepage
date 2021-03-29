@@ -9,7 +9,7 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  color: #000;
+  color: #080808;
   margin: 0;
   padding: 0;
 }
@@ -17,14 +17,6 @@ body {
 .container {
   margin: 5px;
   padding: 5px;
-}
-
-.nav {
-  height: 60px;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
 }
 
 ul {
@@ -35,14 +27,63 @@ ul > li {
   display: inline-block;
 }
 
-.nav img.icon {
-  width: 40px;
-  height: 40px;
+.nav {
+  height: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.nav ul {
+  display: flex;
+  align-items: center;
 }
 
-.nav img.photo {
-  width: 45px;
-  height: 45px;
+.nav ul li {
+  padding-right: 18px;
+}
+
+.nav ul li:last-child {
+  padding-right: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+input[type="image"].icon {
+  width: 32px;
+  height: 32px;
+  padding: 3px;
+  opacity: 0.5;
+  margin: 0 5px 0 7px;
+  border-radius: 15px;
+}
+
+input[type="image"].icon:hover,
+input[type="image"].icon:active {
+  background-color: #e3e3e3;
+}
+
+input[type="image"].photo {
+  width: 34px;
+  height: 34px;
+  border-radius: 16px;
+  border: 3px solid transparent;
+}
+
+input[type="image"].photo:hover,
+input[type="image"].photo:active {
+  border: 3px solid #e3e3e3;
+}
+input[type="image"]:focus {
+  outline: 0;
 }
 
 .main {
