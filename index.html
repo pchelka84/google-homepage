@@ -25,17 +25,17 @@
     </nav>
     <main class="main"> 
       <img src="./src/googlelogo.png" alt="Google logo" class="logo"> 
-      <form class="search">
-        <div class="search-bar">
-          <i class="fas fa-search"></i>
-          <input type="text" name="search">
+      <div class="search-container">
+        <form id="submit" class="flex">
+          <span class="search-icon"><i class="fas fa-search"></i></span>
+          <input type="text" id="search">
           <button class="btn-mic"><i class="fas fa-microphone"></i></button>
-        </div>
-        <div>
+        </form> 
+        <div class="btn">
           <button type="submit" class="btn-search">Search Google</button>
-          <button type="submit" class="btn-lucky">I'm Feeling Lucky</button> 
+          <button type="submit" class="btn-lucky">I'm Feeling Lucky</button>  
         </div>
-      </form>
+      </div>
     </main>
     <footer class="footer">
       <ul>
