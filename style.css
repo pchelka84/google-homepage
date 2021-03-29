@@ -17,6 +17,7 @@ body {
 .container {
   margin: 5px;
   padding: 5px;
+  height: 100vh;
 }
 
 ul {
@@ -103,35 +104,27 @@ button:focus {
 }
 
 .search-container {
+  margin: auto;
+  width: 800px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 30px;
+  text-align: center;
 }
 
-.flex:hover input[type="text"] {
+.search-container:hover input[type="text"] {
   border: 1px solid #a4a4a4;
   border-right: 0;
   border-left: 0;
-  /* box-shadow: 3px 0 4px 2px rgba(0, 0, 0, 0.1);
-  clip-path: inset(-10px 0px -3px -3px); */
 }
 
-.flex:hover .search-icon {
-  /* box-shadow: 3px 0 4px 2px rgba(0, 0, 0, 0.1); */
+.search-container:hover .search-icon {
   border: 1px solid #a4a4a4;
   border-right: 0;
 }
 
-.flex:hover .btn-mic {
-  /* box-shadow: 3px 0 4px 1px rgba(0, 0, 0, 0.1); */
+.search-container:hover .btn-mic {
   border: 1px solid #a4a4a4;
   border-left: 0;
 }
@@ -166,7 +159,7 @@ button:focus {
 }
 
 input[type="text"] {
-  width: 500px;
+  width: 65%;
   border: 1px solid #e3e3e3;
   height: 50px;
   border-right: 0;
@@ -198,7 +191,6 @@ input[type="text"] {
 
 .footer {
   width: 100%;
-  height: 60px;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -207,7 +199,7 @@ input[type="text"] {
   align-items: center;
   background-color: #f2f2f2;
   color: #70757a;
-  padding: 0 30px;
+  padding: 23px 25px;
 }
 
 .footer a {
@@ -225,4 +217,68 @@ input[type="text"] {
 
 .footer ul li:last-child {
   padding-right: 0;
+}
+
+@media (max-width: 950px) {
+  .search-container {
+    width: 600px;
+  }
+}
+
+@media (max-width: 650px) {
+  body {
+    font-size: 14px;
+  }
+
+  .main {
+    margin-top: 60px;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  .search-container {
+    width: 100%;
+  }
+
+  input[type="text"],
+  .search-icon,
+  .btn-mic {
+    height: 40px;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer ul {
+    margin: 15px 0;
+  }
+
+  .footer ul li {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 13px;
+  }
+
+  .main {
+    margin-top: 50px;
+  }
+
+  .btn button {
+    padding: 12px 10px;
+  }
+
+  .footer {
+    font-size: 11px;
+  }
+
+  .footer ul {
+    margin: 10px 0;
+  }
 }
