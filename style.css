@@ -101,6 +101,7 @@ button:focus {
 
 .logo {
   margin-bottom: 30px;
+  width: 330px;
 }
 
 .search-container {
@@ -235,7 +236,7 @@ input[type="text"] {
   }
 
   .logo {
-    width: 180px;
+    width: 250px;
   }
 
   .search-container {
@@ -268,6 +269,10 @@ input[type="text"] {
 
   .main {
     margin-top: 50px;
+  }
+
+  .logo {
+    width: 180px;
   }
 
   .btn button {
