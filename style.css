@@ -15,9 +15,12 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
   margin: 5px;
   padding: 5px;
-  height: 100vh;
 }
 
 ul {
@@ -92,7 +95,6 @@ button:focus {
 
 .main {
   margin: auto;
-  margin-top: 95px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,13 +102,13 @@ button:focus {
 }
 
 .logo {
+  margin-top: 115px;
   margin-bottom: 30px;
   width: 330px;
 }
 
 .search-container {
   margin: auto;
-  width: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,45 +116,30 @@ button:focus {
   text-align: center;
 }
 
-.search-container:hover input[type="text"] {
-  border: 1px solid #a4a4a4;
-  border-right: 0;
-  border-left: 0;
-}
-
-.search-container:hover .search-icon {
-  border: 1px solid #a4a4a4;
-  border-right: 0;
-}
-
-.search-container:hover .btn-mic {
-  border: 1px solid #a4a4a4;
-  border-left: 0;
-}
-
 .search-icon {
-  width: 50px;
-  height: 50px;
-  color: #a4a4a4;
-  border: 1px solid #e3e3e3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-right: 0;
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
-  z-index: -1;
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: auto;
+  transform: translate(180%, -0%);
+  border: none;
+  background: transparent;
+  background-image: url("./src/magnifying-glass-icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .btn-mic {
-  width: 50px;
-  height: 50px;
-  color: #a4a4a4;
-  border: 1px solid #e3e3e3;
-  background-color: transparent;
-  border-left: 0;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
+  width: 25px;
+  height: 25px;
+  display: block;
+  margin: auto;
+  transform: translate(-170%, 0%);
+  border: none;
+  background: transparent;
+  background-image: url(https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .btn-mic:hover {
@@ -160,11 +147,15 @@ button:focus {
 }
 
 input[type="text"] {
-  width: 65%;
-  border: 1px solid #e3e3e3;
+  width: 500px;
   height: 50px;
-  border-right: 0;
-  border-left: 0;
+  border: 1px solid #e3e3e3;
+  border-radius: 25px;
+  padding: 0px 40px;
+}
+
+input:hover {
+  box-shadow: 0 1px 4px 0 #dddddd;
 }
 
 .btn button {
@@ -221,9 +212,9 @@ input[type="text"] {
 }
 
 @media (max-width: 950px) {
-  .search-container {
+  /* .search-container {
     width: 600px;
-  }
+  } */
 }
 
 @media (max-width: 650px) {
@@ -239,15 +230,15 @@ input[type="text"] {
     width: 250px;
   }
 
-  .search-container {
+  /* .search-container {
     width: 100%;
-  }
+  } */
 
-  input[type="text"],
+  /* input[type="text"],
   .search-icon,
   .btn-mic {
     height: 40px;
-  }
+  } */
 
   .footer {
     flex-direction: column;
